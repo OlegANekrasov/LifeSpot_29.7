@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LifeSpot</title>
+    <!--Подключение стилей по отностиельному пути из внешнего файла-->
+    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <!--<script type="text/javascript" defer src="../Static/JS/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" defer src="../Static/JS/jquery-ui.js"></script>-->
+    <script src="../Static/JS/index.js"></script>
+
+    <script type="text/javascript">
+        // Функция объявлена через declaration
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+
+        // Проверка на возраст
+        checkAge();
+
+        // сохранение сессии
+        handleSession()
+
+        // вывод данных сессии в консоль
+        sessionLog();
+
+        /*
+        * Всплывающее окно будет показано по таймауту
+        */
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
+            30000);
+
+    </script>
+</head>
+
+        <!--Хедер страницы находится над тегом body-->
+<header id="header-index">
+    <!--Заголовок страницы-->
+    <h1>LifeSpot - прямые трансляции с улиц</h1>
+    <!--Параграф-->
+    <p>Покажем, что происходит прямо сейчас</p>
+
+    <div>
+        <input type="text" oninput="filterVideo() " size=50%>
+    </div>
+    <!--
+    <div>
+        <input id="text" type="text" name="form-text">
+        <button id="slideUp">Скрыть Поиск</button>
+        <button id="slideDown">Показать Поиск</button>
+    </div>
+    -->
+</header>
+
+    <!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
+    <!--
+    <aside id="sidebar">
+        <div class="navbar">
+            <a href="/"><p>Все трансляции</p></a>
+            <a href="/"><p>О проекте</p></a>
+        </div>
+    </aside>
+    )-->
+    <!--SIDEBAR-->
+    <body>
+        <div class="bordered">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Нью-Йорк, Брайант Парк</h3>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wCcMcaiRbhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Санкт-Петербург, Невский Проспект</h3>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/muVgPUnU7qA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Лондон, автобусный маршрут</h3>
+            </div>
+        </div>
+    </body>
+    <!--FOOTER-->
+    <!--Футер страницы находится под основной частью (body)
+    <footer>
+        <p>LifeSpot - видео трансляции</p>
+        <p>Связь с разработчиком: evmorgunov@yahoo.com</p>
+    </footer>
+    -->
+</html>
